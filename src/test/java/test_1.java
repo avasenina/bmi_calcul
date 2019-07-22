@@ -10,7 +10,7 @@ public class test_1 {
 
 
     @Test
-    public void categoryShouldBeCorrect(){
+    public void categoryShouldBeCorrect1(){
         System.setProperty("webdriver.chrome.driver", "src/test/resources/webdrivers/chromedriver.exe");
 
         ChromeDriver driver = new ChromeDriver();
@@ -24,7 +24,7 @@ public class test_1 {
     }
 
     @Test
-    public void categoryShouldBeCorrect(){
+    public void categoryShouldBeCorrect2(){
         System.setProperty("webdriver.chrome.driver", "src/test/resources/webdrivers/chromedriver.exe");
 
         ChromeDriver driver = new ChromeDriver();
@@ -38,7 +38,7 @@ public class test_1 {
     }
 
     @Test
-    public void categoryShouldBeCorrect(){
+    public void categoryShouldBeCorrect3(){
         System.setProperty("webdriver.chrome.driver", "src/test/resources/webdrivers/chromedriver.exe");
 
         ChromeDriver driver = new ChromeDriver();
@@ -52,21 +52,21 @@ public class test_1 {
     }
 
     @Test
-    public void categoryShouldBeCorrect(){
+    public void categoryShouldBeCorrect4(){
         System.setProperty("webdriver.chrome.driver", "src/test/resources/webdrivers/chromedriver.exe");
 
         ChromeDriver driver = new ChromeDriver();
         driver.get(Calculator_URL);
         driver.findElement(By.name("wg")).sendKeys("26.64864");
         driver.findElement(By.name("ht")).sendKeys("120");
-                driver.findElement(By.name("cc")).click();
+        driver.findElement(By.name("cc")).click();
         String category = driver.findElement(By.name("desc")).getAttribute("value");
         assertEquals("Your category is Normal", category);
         driver.quit();
     }
 
     @Test
-    public void categoryShouldBeCorrect(){
+    public void categoryShouldBeCorrect5(){
         System.setProperty("webdriver.chrome.driver", "src/test/resources/webdrivers/chromedriver.exe");
 
         ChromeDriver driver = new ChromeDriver();
