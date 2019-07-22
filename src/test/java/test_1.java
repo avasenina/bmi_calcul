@@ -15,11 +15,82 @@ public class test_1 {
 
         ChromeDriver driver = new ChromeDriver();
         driver.get(Calculator_URL);
-        driver.findElement(By.name("wg")).sendKeys("55");
-        driver.findElement(By.name("ht")).sendKeys("169");
+        driver.findElement(By.name("wg")).sendKeys("20");
+        driver.findElement(By.name("ht")).sendKeys("115,508563111578");
         driver.findElement(By.name("cc")).click();
+        String category = driver.findElement(By.name("desc")).getAttribute("value");
+        assertEquals("Your category is Starvation", category);
+        driver.quit();
+    }
+
+    @Test
+    public void categoryShouldBeCorrect(){
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/webdrivers/chromedriver.exe");
+
+        ChromeDriver driver = new ChromeDriver();
+        driver.get(Calculator_URL);
+        driver.findElement(By.name("wg")).sendKeys("21.6");
+        driver.findElement(By.name("ht")).sendKeys("120");
+        driver.findElement(By.name("cc")).click();
+        String category = driver.findElement(By.name("desc")).getAttribute("value");
+        assertEquals("Your category is Normal);
+        driver.quit();
+    }
+
+    @Test
+    public void categoryShouldBeCorrect(){
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/webdrivers/chromedriver.exe");
+
+        ChromeDriver driver = new ChromeDriver();
+        driver.get(Calculator_URL);
+        driver.findElement(By.name("wg")).sendKeys("27.04");
+        driver.findElement(By.name("ht")).sendKeys("130");
+        driver.findElement(By.name("cc")).click();
+        String category = driver.findElement(By.name("desc")).getAttribute("value");
+        assertEquals("Your category is Underweight", category);
+        driver.quit();
+    }
+
+    @Test
+    public void categoryShouldBeCorrect(){
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/webdrivers/chromedriver.exe");
+
+        ChromeDriver driver = new ChromeDriver();
+        driver.get(Calculator_URL);
+        driver.findElement(By.name("wg")).sendKeys("26.64864");
+        driver.findElement(By.name("ht")).sendKeys("120");
+                driver.findElement(By.name("cc")).click();
         String category = driver.findElement(By.name("desc")).getAttribute("value");
         assertEquals("Your category is Normal", category);
         driver.quit();
     }
+
+    @Test
+    public void categoryShouldBeCorrect(){
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/webdrivers/chromedriver.exe");
+
+        ChromeDriver driver = new ChromeDriver();
+        driver.get(Calculator_URL);
+        driver.findElement(By.name("wg")).sendKeys("43.1856");
+        driver.findElement(By.name("ht")).sendKeys("120");
+        driver.findElement(By.name("cc")).click();
+        String category = driver.findElement(By.name("desc")).getAttribute("value");
+        assertEquals("Your category is Overweight", category);
+        driver.quit();
+    }
+
+//    @Test
+//    public void categoryShouldBeCorrect(){
+//        System.setProperty("webdriver.chrome.driver", "src/test/resources/webdrivers/chromedriver.exe");
+//
+//        ChromeDriver driver = new ChromeDriver();
+//        driver.get(Calculator_URL);
+//        driver.findElement(By.name("opt1")).sendKeys("pounds");
+//        driver.findElement(By.name("wg")).sendKeys("1999999999999999999999999999999999999999999");
+//        driver.findElement(By.name("opt2")).sendKeys("1");
+//        driver.findElement(By.name("cc")).click();
+//        String category = driver.findElement(By.name("desc")).getAttribute("value");
+//        assertEquals("Your category is Overweight", category);
+//        driver.quit();
+//}
 }
