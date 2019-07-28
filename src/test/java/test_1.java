@@ -33,7 +33,7 @@ public class test_1 {
         driver.findElement(By.name("ht")).sendKeys("120");
         driver.findElement(By.name("cc")).click();
         String category = driver.findElement(By.name("desc")).getAttribute("value");
-        assertEquals("Your category is Normal);
+        assertEquals("Your category is Normal", category);
         driver.quit();
     }
 
@@ -78,19 +78,4 @@ public class test_1 {
         assertEquals("Your category is Overweight", category);
         driver.quit();
     }
-
-//    @Test
-//    public void categoryShouldBeCorrect(){
-//        System.setProperty("webdriver.chrome.driver", "src/test/resources/webdrivers/chromedriver.exe");
-//
-//        ChromeDriver driver = new ChromeDriver();
-//        driver.get(Calculator_URL);
-//        driver.findElement(By.name("opt1")).sendKeys("pounds");
-//        driver.findElement(By.name("wg")).sendKeys("1999999999999999999999999999999999999999999");
-//        driver.findElement(By.name("opt2")).sendKeys("1");
-//        driver.findElement(By.name("cc")).click();
-//        String category = driver.findElement(By.name("desc")).getAttribute("value");
-//        assertEquals("Your category is Overweight", category);
-//        driver.quit();
-//}
 }
